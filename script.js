@@ -40,4 +40,31 @@ faqItems.forEach(item => {
         }
     });
 });
+    let timerSpan = document.querySelector(".timer");
+
+    // ٹائمر کا وقت (13 گھنٹے 10 منٹ 3 سیکنڈ)
+    let endTime = new Date().getTime() +
+        (13 * 60 * 60 * 1000) +
+        (10 * 60 * 1000) +
+        (3 * 1000);
+
+    function updateTimer() {
+        let now = new Date().getTime();
+        let remaining = endTime - now;
+
+        if (remaining <= 0) {
+            timerSpan.innerText = "Offer Ended";
+            return;
+        }
+
+        let d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        let h = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        let s = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        timerSpan.innerText = `${d}d ${h}h ${m}m ${s}s`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
 

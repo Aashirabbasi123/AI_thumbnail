@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Thumbnail UI Clone</title>
+  <link rel="stylesheet" href="assets/css/edit.css" />
+  <!-- <link rel="stylesheet" href="assets/css/dashboar.css"> -->
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2 class="logo">Neam<span>X</span></h2>
+
+    <ul class="menu">
+      <li class="active"><a href="dashboard.html">🏠 Home</a></li>
+
+      <p class="section">THUMBNAIL</p>
+      <li><a href="generate.html">✨ Generate</a></li>
+      <li><a href="edit.html">✏️ Edit</a></li>
+      <li><a href="enhance.html">🔧 Enhance</a></li>
+
+      <p class="section">OTHER TOOLS</p>
+      <li>
+        <a href="keyword.html">
+          🔑 Keywords <span class="free-tag">Free</span>
+        </a>
+      </li>
+      <li><a href="recreate.html">♻️ Recreate</a></li>
+
+      <p class="section">LIBRARY</p>
+      <li><a href="explore.html">📁 Explore</a></li>
+      <li><a href="media.html">🖼️ My Media</a></li>
+      <li><a href="feedback.html">💬 Feedback</a></li>
+    </ul>
+
+    <div class="user-dropdown">
+      <div class="user-btn" onclick="toggleDropdown()">
+        <img src="https://i.pravatar.cc/100" alt="">
+        <span>Aashir Khan</span>
+        <i class="arrow">▼</i>
+      </div>
+
+      <div class="dropdown-menu" id="dropdownMenu">
+        <div class="user-info">
+          <img src="https://i.pravatar.cc/100" alt="">
+          <div>
+            <h4>Aashir Khan</h4>
+            <p>aashirkhan815@gmail.com</p>
+            <span class="credit">• 1 credits</span>
+          </div>
+        </div>
+
+        <a href="#" class="item">⚙️ Manage Account</a>
+        <a href="#" class="item">💳 Buy Credits</a>
+        <a href="#" class="item">ℹ️ About</a>
+        <a href="#" class="item">📞 Contact</a>
+
+        <hr>
+
+        <a href="#" class="item logout">↩ Logout</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="edit-page">
+    <h1>Edit Thumbnail</h1>
+    <p class="subtitle">Make changes to your thumbnail with just words</p>
+
+    <div class="container">
+      <!-- UPLOAD BOX -->
+      <div class="upload-box" id="uploadBoxInner">
+        <div class="upload-icon" id="uploadIconBg">
+          <div>⬆️</div>
+        </div>
+
+        <h2 class="upload-box-text-main">Drop your thumbnail here</h2>
+        <p class="upload-box-text-support">
+          Drag and drop your thumbnail or click to browse from your device
+        </p>
+
+        <img id="imagePreview" style="display:none; width:100%; border-radius:14px; margin-top:20px;" />
+
+        <div class="file-types">
+          <span>JPG</span>
+          <span>PNG</span>
+          <span>WebP</span>
+          <span>Max 10MB</span>
+        </div>
+
+        <label for="imageInput" id="chooseBtn" class="choose-btn">Choose Files</label>
+        <input type="file" id="imageInput" accept="image/*" />
+      </div>
+
+      <!-- EDIT BOX -->
+      <div class="edit-box">
+        <h2>Editing Instructions</h2>
+
+        <textarea
+          placeholder="Describe how you want to edit your thumbnail... (e.g., 'Change the background to a sunset', 'Add a vintage filter', 'Remove the person in the background')"></textarea>
+
+        <button class="edit-btn">Edit ✏️</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

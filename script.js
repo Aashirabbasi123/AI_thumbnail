@@ -1,14 +1,14 @@
 // Category active effect
 const buttons = document.querySelectorAll('.scroll-content button');
 buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
+    btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
 });
 
 document.getElementById('generateBtn').addEventListener('click', () => {
-  alert('Generating Thumbnails...');
+    alert('Generating Thumbnails...');
 });
 const faqItems = document.querySelectorAll(".faq-item");
 
@@ -40,31 +40,50 @@ faqItems.forEach(item => {
         }
     });
 });
-    let timerSpan = document.querySelector(".timer");
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("open");
+}
+const imageInput = document.getElementById("imageInput");
+const chooseBtn = document.getElementById("chooseBtn");
+const uploadBoxInner = document.getElementById("uploadBoxInner");
+const imagePreview = document.getElementById("imagePreview");
+const uploadIconBg = document.getElementById("uploadIconBg");
 
-    // ٹائمر کا وقت (13 گھنٹے 10 منٹ 3 سیکنڈ)
-    let endTime = new Date().getTime() +
-        (13 * 60 * 60 * 1000) +
-        (10 * 60 * 1000) +
-        (3 * 1000);
+chooseBtn.addEventListener("click", () => imageInput.click());
 
-    function updateTimer() {
-        let now = new Date().getTime();
-        let remaining = endTime - now;
+uploadBoxInner.addEventListener("click", (e) => {
+    if (e.target !== chooseBtn) imageInput.click();
+});
 
-        if (remaining <= 0) {
-            timerSpan.innerText = "Offer Ended";
-            return;
-        }
+imageInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (!file) return;
 
-        let d = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        let h = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-        let s = Math.floor((remaining % (1000 * 60)) / 1000);
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = "block";
 
-        timerSpan.innerText = `${d}d ${h}h ${m}m ${s}s`;
-    }
+        uploadIconBg.style.display = "none";
+        document.querySelector(".upload-box-text-main").style.display = "none";
+        document.querySelector(".upload-box-text-support").style.display = "none";
+        chooseBtn.style.display = "none";
+    };
 
-    setInterval(updateTimer, 1000);
-    updateTimer();
+    reader.readAsDataURL(file);
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("JS Running!");
+
+    const buttons = document.querySelectorAll(".cat-btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelector(".cat-btn.active")?.classList.remove("active");
+            btn.classList.add("active");
+
+            console.log("Clicked:", btn.dataset.cat);
+        });
+    });
+});

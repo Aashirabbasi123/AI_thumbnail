@@ -1,0 +1,128 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #0d0f18;
+    color: #fff;
+    display: flex;
+}
+
+/* MAIN AREA (Sidebar ke sath adjust) */
+.main {
+    margin-left: 260px; /* Sidebar ka space */
+    padding: 40px;
+    width: calc(100% - 260px);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(90deg, #5636ff, #b933f5);
+    padding: 45px 50px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #ffdc3b;
+}
+
+.hero p {
+    margin-top: 14px;
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.hero-img img {
+    width: 320px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin-top: 45px;
+    margin-bottom: 22px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* TOOL CARDS GRID */
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+/* CARDS */
+.tool-card {
+    background: #131622;
+    padding: 22px;
+    border-radius: 16px;
+    transition: 0.25s;
+    border: 1px solid #1e2130;
+}
+
+.tool-card:hover {
+    background: #1b1f2f;
+    transform: translateY(-4px);
+    border-color: #2b2f43;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* ICONS */
+.icon {
+    width: 50px;
+    height: 50px;
+    background: #444;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.orange { background: #ff6633; }
+.pink   { background: #d83aff; }
+.yellow { background: #ffbb33; }
+
+/* TEXTS */
+.tool-card h3 {
+    margin-top: 18px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.tool-card p {
+    margin-top: 8px;
+    color: #b5b6c7;
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+/* FREE TAG */
+.free-tag.small {
+    background: #6a5af9;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-top: 10px;
+    display: inline-block;
+}

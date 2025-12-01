@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeamX – Dashboard</title>
-    <link rel="stylesheet" href="dashboar.css">
+    <link rel="stylesheet" href="assets/css/dashboar.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <h2 class="logo">Neam<span>X</span></h2>
 
         <ul class="menu">
-            <li class="active"><a href="home.html">🏠 Home</a></li>
+            <li class="active"><a href="dashboard.html">🏠 Home</a></li>
 
             <p class="section">THUMBNAIL</p>
             <li><a href="generate.html">✨ Generate</a></li>
@@ -22,21 +23,49 @@
             <li><a href="enhance.html">🔧 Enhance</a></li>
 
             <p class="section">OTHER TOOLS</p>
-            <li><a href="keywords.html">🔑 Keywords <span class="free-tag">Free</span></a></li>
+            <li>
+                <a href="keyword.html">
+                    🔑 Keywords <span class="free-tag">Free</span>
+                </a>
+            </li>
             <li><a href="recreate.html">♻️ Recreate</a></li>
 
             <p class="section">LIBRARY</p>
             <li><a href="explore.html">📁 Explore</a></li>
-            <li><a href="media.html">📸 My Media</a></li>
+            <li><a href="media.html">🖼️ My Media</a></li>
             <li><a href="feedback.html">💬 Feedback</a></li>
         </ul>
 
+        <div class="user-dropdown">
+            <div class="user-btn" onclick="toggleDropdown()">
+                <img src="https://i.pravatar.cc/100" alt="">
+                <span>Aashir Khan</span>
+                <i class="arrow">▼</i>
+            </div>
 
-        <div class="user">
-            <img src="https://i.pravatar.cc/100" alt="">
-            <span>Aashir Khan</span>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/100" alt="">
+                    <div>
+                        <h4>Aashir Khan</h4>
+                        <p>aashirkhan815@gmail.com</p>
+                        <span class="credit">• 1 credits</span>
+                    </div>
+                </div>
+
+                <a href="#" class="item">⚙️ Manage Account</a>
+                <a href="#" class="item">💳 Buy Credits</a>
+                <a href="#" class="item">ℹ️ About</a>
+                <a href="#" class="item">📞 Contact</a>
+
+                <hr>
+
+                <a href="#" class="item logout">↩ Logout</a>
+            </div>
         </div>
+
     </div>
+
 
     <!-- MAIN CONTENT -->
     <div class="main">
@@ -85,6 +114,7 @@
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

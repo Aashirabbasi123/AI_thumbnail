@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Enhance Thumbnail</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/enhance.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2 class="logo">Neam<span>X</span></h2>
+
+    <ul class="menu">
+      <li class="active"><a href="dashboard.html">🏠 Home</a></li>
+
+      <p class="section">THUMBNAIL</p>
+      <li><a href="generate.html">✨ Generate</a></li>
+      <li><a href="edit.html">✏️ Edit</a></li>
+      <li><a href="enhance.html">🔧 Enhance</a></li>
+
+      <p class="section">OTHER TOOLS</p>
+      <li>
+        <a href="keyword.html">
+          🔑 Keywords <span class="free-tag">Free</span>
+        </a>
+      </li>
+      <li><a href="recreate.html">♻️ Recreate</a></li>
+
+      <p class="section">LIBRARY</p>
+      <li><a href="explore.html">📁 Explore</a></li>
+      <li><a href="media.html">🖼️ My Media</a></li>
+      <li><a href="feedback.html">💬 Feedback</a></li>
+    </ul>
+
+    <div class="user-dropdown">
+      <div class="user-btn" onclick="toggleDropdown()">
+        <img src="https://i.pravatar.cc/100" alt="">
+        <span>Aashir Khan</span>
+        <i class="arrow">▼</i>
+      </div>
+
+      <div class="dropdown-menu" id="dropdownMenu">
+        <div class="user-info">
+          <img src="https://i.pravatar.cc/100" alt="">
+          <div>
+            <h4>Aashir Khan</h4>
+            <p>aashirkhan815@gmail.com</p>
+            <span class="credit">• 1 credits</span>
+          </div>
+        </div>
+
+        <a href="#" class="item">⚙️ Manage Account</a>
+        <a href="#" class="item">💳 Buy Credits</a>
+        <a href="#" class="item">ℹ️ About</a>
+        <a href="#" class="item">📞 Contact</a>
+
+        <hr>
+
+        <a href="#" class="item logout">↩ Logout</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="enhance-page">
+    <div class="container">
+      <div class="main-title">Enhance Thumbnail</div>
+      <div class="subtitle">Not happy with your thumbnail? Upload it, and let AI work its magic</div>
+
+      <div class="upload-box">
+        <div class="upload-box-inner" id="uploadBoxInner">
+          <img id="imagePreview" />
+          <div class="upload-icon-bg" id="uploadIconBg">
+            <!-- Upload SVG icon -->
+            <svg viewBox="0 0 48 48">
+              <path
+                d="M23.5 31c1.1 0 2-.9 2-2v-9.19l2.59 2.59a2 2 0 1 0 2.83-2.83l-6-6a2 2 0 0 0-2.83 0l-6 6a2 2 0 1 0 2.83 2.83L21.5 19.81V29c0 1.1.9 2 2 2ZM38 34a2 2 0 1 1 0 4H10a2 2 0 1 1 0-4h28Z">
+              </path>
+            </svg>
+          </div>
+          <div class="upload-box-text-main">Drag & drop your thumbnail or choose file</div>
+          <div class="upload-box-text-support">Supports JPG, PNG, WebP up to 10MB</div>
+          <button class="choose-btn" id="chooseBtn">Choose File</button>
+          <input type="file" id="imageInput" accept="image/*" />
+        </div>
+      </div>
+
+      <div class="enhance-bar">
+        <button class="enhance-btn">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M17.56 7.94l1.06.53a1 1 0 0 0 .88-1.76l-1.06-.53-.53-1.06a1 1 0 1 0-1.76.88l.53 1.06ZM18 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0ZM7 5a1 1 0 0 0 1-1V3a1 1 0 1 0-2 0v1a1 1 0 0 0 1 1Zm12.92 8.62-1.06.53-.53 1.06a1 1 0 0 0 1.76.88l.53-1.06 1.06-.53a1 1 0 0 0-.88-1.76Zm-3.52-2.17a3 3 0 0 0-4.24 0l-7.48 7.48a3 3 0 0 0 4.24 4.24l7.48-7.48a3 3 0 0 0 0-4.24Zm-1.41 2.83-7.48 7.48a1 1 0 1 1-1.41-1.41l7.48-7.48a1 1 0 0 1 1.41 1.41ZM4 14a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm0-5a1 1 0 0 0 1-1V7a1 1 0 1 0-2 0v1a1 1 0 0 0 1 1Zm.56-4.06-.53 1.06-1.06.53a1 1 0 1 0 .88 1.76l1.06-.53.53-1.06A1 1 0 1 0 4.56 4.94Z">
+            </path>
+          </svg>
+          Enhance
+          <span class="enhance-badge">
+            <svg class="enhance-stars" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="m10 2 1.82 5.6h5.15l-4.17 3.08 1.82 5.5L10 13.1l-4.16 3.08 1.81-5.5-4.16-3.08h5.15L10 2Z"
+                fill="#38bdf8"></path>
+            </svg>
+            1
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get elements
+    const imageInput = document.getElementById("imageInput");
+    const chooseBtn = document.getElementById("chooseBtn");
+    const uploadBoxInner = document.getElementById("uploadBoxInner");
+    const imagePreview = document.getElementById("imagePreview");
+    const uploadIconBg = document.getElementById("uploadIconBg");
+
+    // When clicking "Choose File" button
+    chooseBtn.addEventListener("click", () => {
+      imageInput.click();
+    });
+
+    // When clicking inside upload box
+    uploadBoxInner.addEventListener("click", (e) => {
+      if (e.target !== chooseBtn) {
+        imageInput.click();
+      }
+    });
+
+    // When file is selected
+    imageInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = "block";
+
+        // Hide icon + text when image is uploaded
+        uploadIconBg.style.display = "none";
+        document.querySelector(".upload-box-text-main").style.display = "none";
+        document.querySelector(".upload-box-text-support").style.display = "none";
+        chooseBtn.style.display = "none";
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+
+</html>

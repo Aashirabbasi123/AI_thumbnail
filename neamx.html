@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeamX - Viral Thumbnails</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -15,10 +15,10 @@
     <nav>
         <div class="logo">Neam<span style="color:#5f9bff;">X</span></div>
         <div class="nav-links">
-            <a href="login.html">Pricing</a>
-            <a href="login.html">Thumbnail</a>
-            <a href="login.html">Recreate</a>
-            <a href="login.html">Keywords</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="">Thumbnail</a>
+            <a href="recreate.html">Recreate</a>
+            <a href="keyword.html">Keywords</a>
             <a href="login.html" class="create-btn">Create Now →</a>
         </div>
     </nav>
@@ -42,38 +42,27 @@
     <h1 class="Thumbnail">Generate Thumbnails</h1>
     <p class="Thumbnail">Generate viral thumbnails with just your video title using AI in seconds.</p>
     <!-- AUTO MOVING CATEGORY BAR -->
-    <div class="auto-scroll top-scroll">
-        <div class="scroll-content">
-            <button class="active">All</button>
-            <button>Gaming</button>
-            <button>Vlogs</button>
-            <button>Fitness</button>
-            <button>Education</button>
-            <button>Sports</button>
-            <button>News & Politics</button>
-            <button>Entertainment</button>
-            <button>Science</button>
-            <button>Tutorials</button>
-            <button>Business</button>
-            <button>Finance</button>
-            <button>Documentary</button>
-
-            <!-- duplicate for infinite motion -->
-            <button>All</button>
-            <button>Gaming</button>
-            <button>Vlogs</button>
-            <button>Fitness</button>
-            <button>Education</button>
-            <button>Sports</button>
-            <button>News & Politics</button>
-            <button>Entertainment</button>
-            <button>Science</button>
-            <button>Tutorials</button>
-            <button>Business</button>
-            <button>Finance</button>
-            <button>Documentary</button>
+    <!-- AUTO MOVING CATEGORY BAR (fixed no-new-tab, smooth scroll) -->
+    <!-- FIXED CATEGORY BAR -->
+    <div class="category-bar">
+        <div class="category-scroll" id="categoryScroll">
+            <button class="cat-btn active" data-cat="all">All</button>
+            <button class="cat-btn" data-cat="gaming">Gaming</button>
+            <button class="cat-btn" data-cat="vlogs">Vlogs</button>
+            <button class="cat-btn" data-cat="fitness">Fitness</button>
+            <button class="cat-btn" data-cat="education">Education</button>
+            <button class="cat-btn" data-cat="sports">Sports</button>
+            <button class="cat-btn" data-cat="news">News & Politics</button>
+            <button class="cat-btn" data-cat="entertainment">Entertainment</button>
+            <button class="cat-btn" data-cat="science">Science</button>
+            <button class="cat-btn" data-cat="tutorials">Tutorials</button>
+            <button class="cat-btn" data-cat="business">Business</button>
+            <button class="cat-btn" data-cat="finance">Finance</button>
+            <button class="cat-btn" data-cat="documentary">Documentary</button>
         </div>
     </div>
+
+
 
     <!-- UPPER SLIDER (moves right) -->
     <div class="slider top">
@@ -526,80 +515,110 @@
         </div>
         </div>
 
-        <footer class="footer">
+        <footer class="nx-footer">
+            <div class="nx-footer-inner">
+                <!-- LEFT: logo + text + socials -->
+                <div class="nx-footer-main">
+                    <a class="nx-logo">
+                        <span class="nx-logo-main">Neam</span><span class="nx-logo-x">X</span>
+                    </a>
 
-            <div class="blur-1"></div>
-            <div class="blur-2"></div>
+                    <p class="nx-footer-text">
+                        NeamX empowers creators to stand out with AI-generated high‑performing
+                        thumbnails. <span>Faster than ever.</span>
+                    </p>
 
-            <div class="container">
-
-                <!-- Brand -->
-                <div>
-                    <h1 style="font-size: 32px; font-weight:800;">
-                        <span
-                            style="background: linear-gradient(to right,#a855f7,#60a5fa); -webkit-background-clip: text; color: transparent;">
-                            NeamX
-                        </span>
-                    </h1>
-
-                    <p>NeamX empowers creators to stand out with AI-generated high-performing thumbnails. <b
-                            style="color:#c084fc;">Faster than ever.</b></p>
-
-                    <div class="social">
-                        <a><i class="fa-brands fa-youtube"></i></a>
-                        <a><i class="fa-brands fa-instagram"></i></a>
-                        <a><i class="fa-brands fa-twitter"></i></a>
+                    <div class="nx-footer-socials">
+                        <a class="nx-footer-social">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a class="nx-footer-social">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="nx-footer-social">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Product -->
-                <div>
-                    <h3>Product</h3>
-                    <ul>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
-                </div>
+                <!-- RIGHT: cards -->
+                <div class="nx-footer-right">
+                    <!-- top: product / resources / company -->
+                    <div class="nx-footer-columns">
+                        <div class="nx-footer-group">
+                            <h4>Product</h4>
+                            <a class="nx-footer-card" id="card-pricing" href="pricing.html">
+                                <span class="nx-footer-card-title">Pricing</span>
+                                <span class="nx-footer-card-sub">Plans for every creator</span>
+                            </a>
+                        </div>
 
-                <!-- Resources -->
-                <div>
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Community</a></li>
-                    </ul>
-                </div>
+                        <div class="nx-footer-group">
+                            <h4>Resources</h4>
+                            <a class="nx-footer-card" id="card-help-center">
+                                <span class="nx-footer-card-title">Help Center</span>
+                                <span class="nx-footer-card-sub">Get support</span>
+                            </a>
+                            <a class="nx-footer-card" id="card-community">
+                                <span class="nx-footer-card-title">Community</span>
+                                <span class="nx-footer-card-sub">Explore community creations</span>
+                            </a>
+                        </div>
 
-                <!-- Company -->
-                <div>
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-
-                    <div class="contact-box">
-                        <p>Contact Info</p>
-                        <a href="mailto:support@neamx.com" style="color:#c084fc;">support@neamx.com</a>
+                        <div class="nx-footer-group">
+                            <h4>Company</h4>
+                            <a class="nx-footer-card" id="card-about" href="contact.html">
+                                <span class="nx-footer-card-title">About Us</span>
+                                <span class="nx-footer-card-sub">Our mission</span>
+                            </a>
+                            <a class="nx-footer-card" id="card-contact">
+                                <span class="nx-footer-card-title">Contact</span>
+                                <span class="nx-footer-card-sub">Get in touch</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div style="margin-top:20px;">
-                        <span class="badge ssl">SSL Secured</span>
-                        <span class="badge iso">ISO Certified</span>
+                    <!-- bottom: contact info + trusted -->
+                    <div class="nx-footer-lower">
+                        <a class="nx-footer-contact-card" id="card-contact-info">
+                            <div class="nx-footer-contact-header">Contact Info</div>
+                            <div class="nx-footer-contact-row">
+                                <span class="nx-footer-contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <span class="nx-footer-contact-email">support@neamx.com</span>
+                            </div>
+                        </a>
+
+                        <div class="nx-footer-trust">
+                            <h4>Trusted &amp; Secure</h4>
+                            <div class="nx-footer-badges">
+                                <span class="nx-badge nx-badge-green">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <span>SSL Secured</span>
+                                </span>
+                                <span class="nx-badge nx-badge-blue">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>ISO Certified</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Refund Policy</a>
+            <!-- bottom bar -->
+            <div class="nx-footer-bottom">
+                <div class="nx-footer-links">
+                    <a class="nx-footer-link" id="link-terms">Terms &amp; Conditions</a>
+                    <a class="nx-footer-link" id="link-privacy">Privacy Policy</a>
+                    <a class="nx-footer-link" id="link-refund">Refund Policy</a>
                 </div>
-
-                <p>© 2025 NeamX. Empowering creators worldwide.</p>
+                <p class="nx-footer-copy">
+                    © 2025 NeamX. Empowering creators worldwide.
+                </p>
             </div>
         </footer>
-
 
     </main>
     <script src="script.js"></script>
